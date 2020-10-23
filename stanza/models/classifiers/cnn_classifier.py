@@ -63,7 +63,7 @@ class CNNClassifier(nn.Module):
         # TODO: this can be removed sometime after all models are rebuilt
         use_elmo = getattr(args, 'use_elmo', False)
         elmo_projection = getattr(args, 'elmo_projection', None)
-        char_lowercase = getattr(checkpoint['config'], 'char_lowercase', False)
+        char_lowercase = getattr(args, 'char_lowercase', False)
         charlm_projection = getattr(args, 'charlm_projection', None)
         self.config = SimpleNamespace(filter_channels = args.filter_channels,
                                       filter_sizes = args.filter_sizes,
